@@ -1,0 +1,26 @@
+<mat-card class="todo-card" [class.completed]="task.completed" (click)="editTask()">
+  
+  <button mat-icon-button class="delete-btn" color="warn" (click)="deleteTask($event)">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <div class="task-header">
+    <mat-checkbox 
+      [checked]="task.completed" 
+      (change)="toggleCompletion()" 
+      (click)="$event.stopPropagation()">
+    </mat-checkbox>
+    <span class="task-name">{{ task.name }}</span>
+  </div>
+
+  <div class="task-details">
+    <span class="task-date">
+      📆 Due: {{ task.dueDate | date: 'MMM d, y' }} at {{ task.dueTime | date: 'h:mm a' }}
+    </span>
+  </div>
+
+  <div class="priority-container">
+    <span class="task-priority" [ngClass]="getPriorityClass(task.priority)">{{ task.priority }}</span>
+  </div>
+
+</mat-card>

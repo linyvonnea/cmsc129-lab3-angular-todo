@@ -1,0 +1,104 @@
+
+.todo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  background: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  max-width: 600px;
+  width: 90%;
+}
+
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn mat-icon {
+  font-size: 20px;
+  color: #d32f2f;
+}
+
+.delete-btn:hover mat-icon {
+  color: #b71c1c;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+mat-checkbox {
+  margin-right: 5px;
+}
+
+.task-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.task-details {
+  padding-left: 53px; 
+}
+
+
+.priority-container {
+  padding-left: 53px;
+  padding-top: 10px;
+}
+
+.task-date {
+  font-size: 15px;
+  color: #555;
+}
+
+
+.task-priority {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+
+.high-priority {
+  color: white;
+  background: #d32f2f;
+}
+
+.mid-priority {
+  color: white;
+  background: #ffa000;
+}
+
+.low-priority {
+  color: white;
+  background: #388e3c;
+}
+
+
+
+
+
+
+.todo-card.completed {
+  background: #f5f5f5;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
